@@ -1,13 +1,11 @@
-namespace epstein_files_csharp_edition;
+namespace ConsoleApp1;
 
 class Program
 {
     static void Main(string[] args)
     {
-        int _6digitnumber = Console.ReadLine();
-        char[] charArray = _6digitnumber.ToCharArray();
-        charArray.reverse(); // the array has this method already implemented in it.
-        string reversed = new string(charArray); // turning it into a string
+        int _6digitnumber = int.Parse(Console.ReadLine());
+        string reversed = new string(_6digitnumber.ToString().Reverse().ToArray());
         Console.WriteLine(reversed);
     }
 }
